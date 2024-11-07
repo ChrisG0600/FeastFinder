@@ -1,0 +1,384 @@
+:root{
+    --form-bg-light:rgb(250, 245, 245);
+}
+
+*{
+    
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+}
+.pointer{
+    cursor: default;
+}
+
+/* Navbar */
+/* Navigation Links Hover Effect */
+.nav-link.text-primary {
+    position: relative;
+    overflow: hidden;
+    transition: color 0.3s ease;
+}
+
+.nav-link.text-primary::after {
+    content: '';
+    position: absolute;
+    left: 0; /* Start from the right */
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #0a58ca;
+    transform: scaleX(0);
+    transform-origin: left; /* Animate from the right */
+    transition: transform 0.3s ease;
+}
+
+.nav-link.text-primary:hover {
+    color: #0a58ca;
+}
+
+.nav-link.text-primary:hover::after {
+    transform: scaleX(1);
+}
+.profile_avatar{
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius:50%; 
+    border: 2px solid blue;
+}
+/* .container{
+    background-color: antiquewhite;
+} */
+
+/* Home page */
+.bg_cuisine {
+    height: 15rem;
+    text-align: center;
+    margin-top: 5rem;
+    background: linear-gradient(135deg, #205ed0 0%, #1151be 100%);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.head_title {
+    font-size: 3.5rem;
+    color: #cedcd5;
+    font-family: 'Roboto', sans-serif;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.card img {
+    height: 200px; /* Fixed height for images */
+    object-fit: contain; /* Ensure aspect ratio is maintained */
+}
+
+
+
+
+/* Login-register page */
+.form-bg {
+    background: #f8f9fa;
+    border-radius: 10px;
+}
+.form-outline {
+    position: relative;
+}
+.form-outline label {
+    position: absolute;
+    top: -10px;
+    left: 15px;
+    background: #f8f9fa;
+    padding: 0 5px;
+    font-size: 0.9rem;
+    color: #6c757d;
+}
+.form-outline input, .form-outline .form-check-input {
+    padding: 10px 15px;
+    border-radius: 5px;
+    border: 1px solid #ced4da;
+}
+.form-outline input:focus, .form-outline .form-check-input:focus {
+    border-color: #80bdff;
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+.btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+}
+.btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #004085;
+}
+
+.gender-selection {
+    margin-bottom: 1.5rem;
+}
+.gender-selection label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+.gender-selection .form-check {
+    margin-bottom: 0.5rem;
+}
+
+
+
+.divider {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin: 20px 0;
+}
+
+.divider::before,
+.divider::after {
+    content: '';
+    flex: 1;
+    border-bottom: 1px solid #ccc;
+}
+
+.divider:not(:empty)::before {
+    margin-right: .25em;
+}
+
+.divider:not(:empty)::after {
+    margin-left: .25em;
+}
+
+.reset-link {
+    font-weight: normal;
+    font-size: 1rem;
+    color: #007bff;
+    text-decoration: none;
+    display: flex;
+    align-items: end;
+    justify-content: end;
+    
+}
+
+.reset-link:hover {
+    
+    text-decoration: underline;
+}
+
+/* Profile page */
+.top-border{
+    border-top: 5px solid blue;
+}
+.profile-bg{
+    background-color: var(--form-bg-light);
+}
+.profile-status{
+    background-color: rgb(214, 216, 219);
+}
+.level-rank{
+    background-color: #0d6efd;
+    color: white;
+    border-radius: 8%;
+}
+/* Edit Page */
+.about-header{
+    text-transform: lowercase;
+}
+.edit-bg{
+    background-color: var(--form-bg-light);
+    cursor: default;
+}
+
+
+/* Add post modal */
+.note_file-title{
+    color: rgb(79, 78, 78);
+    font-size: 0.8rem;
+}
+.ingredients_badge,.single_dish-badge {
+    display: inline-block;
+    padding: 0.5em 1em;
+    font-size: 0.875em;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: auto; /* Adjusts width based on content */
+    max-width: 100%; /* Ensures it doesn't overflow the container */
+    cursor:default;
+}
+.btn-close {
+    margin-left: 0.5em;
+}
+.modal-body,.form_inputs .form-label{
+    font-weight: bold;
+}
+
+/* Contact Form Page */
+.contact-form {
+    background: #fff;
+    margin-top: 10%;
+    margin-bottom: 5%;
+    width: 60%;
+}
+.contact-form .form-control {
+    border-radius: 1rem;
+}
+.contact-image {
+    text-align: center;
+}
+.contact-image img {
+    border-radius: 6rem;
+    width: 11%;
+    margin-top: -3%;
+}
+.contact-form form {
+    padding: 10%;
+}
+.contact-form form .row {
+    margin-bottom: -7%;
+}
+.contact-form h3 {
+    margin-bottom: 8%;
+    margin-top: -10%;
+    text-align: center;
+    color: #0062cc;
+}
+.contact-form .btnContact {
+    width: 50%;
+    border: none;
+    border-radius: 1rem;
+    padding: 1.5%;
+    background: #0062cc;
+    font-weight: 600;
+    color: #fff;
+    cursor: pointer;
+}
+.btnContactSubmit {
+    width: 50%;
+    border-radius: 1rem;
+    padding: 1.5%;
+    color: #fff;
+    background-color: #0062cc;
+    border: none;
+    cursor: pointer;
+}
+
+/* Single Dish Page */
+
+.post_images{
+    width: 100%;
+    height: 38rem;
+    background-size: cover;
+    background-position: center;
+    border-radius: 5% 0 0 5%;
+}
+.post_food-title{
+    margin-top:0.8rem;
+    font-size: 3rem;
+}
+.single_dish-ingredients{
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+}
+.avatar_container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+.avatar{
+    width: 5rem;
+    height: 5rem;
+    border: 2px solid blue;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.heart-container {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+.heart-container i {
+    display: flex;
+    align-items: center;
+    margin-right: 5px;
+}
+.heart-container p {
+    margin: 0;
+}
+.fa-regular,.fa-heart{
+    color: red;
+}
+.fa-heart{
+    cursor: pointer;
+}
+
+/* Cuisine Page */
+.cuisine_page {
+    height: 10rem;
+    text-align: center;
+    background: linear-gradient(135deg, #205ed0 0%, #1151be 100%);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.wrapper{
+    min-height: 100vh;
+}
+.no_post{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Recipe Card */
+.recipe-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    padding: 15px;
+    background-color: #fff;
+    border-radius: 8px;
+}
+
+.recipe-card img {
+    max-height: 200px;
+    object-fit: contain;
+    border-radius: 8px;
+}
+
+.dish_info {
+    padding: 10px;
+}
+
+.dish_info h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.dish_info p {
+    color: #555;
+}
+
+
+/* Footer */
+footer {
+    background: linear-gradient(135deg, #205ed0 0%, #1151be 100%);
+}
+
+footer a {
+    color: #ffc107; /* Accent color */
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+footer .btn-link {
+    transition: transform 0.3s;
+}
+
+footer .btn-link:hover {
+    transform: scale(1.1);
+}
+
