@@ -28,7 +28,8 @@
 <?php endif; ?>
 
 <!-- Form -->
-    <div class="container shadow-lg form-bg my-5 px-5 py-5 col-lg-4 col-md-6 col-sm-8 col-12 fw-bold">
+<div class="wrapper">
+    <div class="content-height container shadow-lg form-bg px-5 py-5 col-lg-4 col-md-6 col-sm-8 col-12 fw-bold">
         <form class="" action="process/login_process.php" method="POST">
             <div class="text-center text-primary">
                 <p class="fs-2">Log In</p>
@@ -62,9 +63,11 @@
 
         </form>
     </div>
-    <div class="text-center mb-5">
+    <div class="text-center mt-5 mb-5">
         <p>Need an account? <a href="./register.php" class="text-primary">Sign up.</a> Here.</p>
-    </div>
+    </div>    
+</div>
+
 <!-- Form end -->
 
 <?php

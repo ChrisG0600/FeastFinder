@@ -73,8 +73,9 @@
     object-fit: contain; /* Ensure aspect ratio is maintained */
 }
 
-
-
+.content-height{
+    margin-top: 10rem;
+}
 
 /* Login-register page */
 .form-bg {
